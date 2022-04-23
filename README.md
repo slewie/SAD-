@@ -33,3 +33,14 @@ There can be any number of plans made and all the places are fetched using Googl
 The Plan considered your total number of hours added, so that it can calculate your travelling time + time spend on a particular location. 
 The final places can be manually sorted by the user or can use auto sort to get the proper route. The system will give 
 suggestions of places where and when required based on other users plans.
+
+## Running:
+
+Example file for `com.slewie.recommender.service.CsvMapDataFetcher`:
+```csv
+108, 5, bar, american, italian
+innomax, 4, cafe, italian, japanese, russian
+Жар Свежар, 3, cafe, russian, tatar
+Art Space, 4, cinema
+Cava, 2, cafe, russian, italian
+```
