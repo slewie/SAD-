@@ -17,6 +17,13 @@ suggestions of places where and when required based on other users plans.
 
 We have chosen Facade design pattern to isolate main code from complexity of subclasses and their relationships.
 
+## Job we have done:
+
+To be written...
+
+## The place of the Facade pattern in our code
+
+
 ## Running:
 
 Example file for `com.slewie.recommender.service.CsvMapDataFetcher`:
