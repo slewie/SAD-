@@ -13,6 +13,10 @@ The Plan considered your total number of hours added, so that it can calculate y
 The final places can be manually sorted by the user or can use auto sort to get the proper route. The system will give 
 suggestions of places where and when required based on other users plans.
 
+## Rationale for choosing the Facade design pattern
+
+We have chosen Facade design pattern to isolate main code from complexity of subclasses and their relationships.
+
 ## Running:
 
 Example file for `com.slewie.recommender.service.CsvMapDataFetcher`:
