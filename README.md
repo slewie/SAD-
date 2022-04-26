@@ -25,6 +25,10 @@ To be written...
 
 In our code, Facade pattern takes place right after Main method. Main method gets arguments from input, and then, if input is in correct format, creates instance of Facade application and runs it.
 
+## The application of a Facade pattern
+
+To be written...
+
 ## Running:
 
 Example file for `com.slewie.recommender.service.CsvMapDataFetcher`:
