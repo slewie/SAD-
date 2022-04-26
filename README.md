@@ -23,6 +23,7 @@ To be written...
 
 ## The place of the Facade pattern in our code
 
+In our code, Facade pattern takes place right after Main method. Main method gets arguments from input, and then, if input is in correct format, creates instance of Facade application and runs it.
 
 ## Running:
 
