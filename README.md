@@ -21,11 +21,11 @@ We have chosen Chain of Responsibility design pattern because we have many handl
 
 Firstly, we constructed a UML diagram containing interfaces, enumerators, and classes. In these objects, we have implemented all need things to manipulate with map and users. Secondly, we wrote code that realizes all objects from UML and creates a CLI application.
 
-## The place of the Facade pattern in our code
+## The place of the Chain of Responsibility pattern in our code
 
 In our code, Facade pattern takes place right after Main method. Main method gets arguments from input, and then, if input is in correct format, creates instance of Facade application and runs it.
 
-## The application of a Facade pattern
+## The application of a Chain of Responsibility pattern
 
 To be written...
 
