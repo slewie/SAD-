@@ -32,6 +32,7 @@ Chain of Responsibility pattern controls sequential executing of programm classe
 ## Steps to execute our program:
 
 1)  Create text file with data written as in the example below:
+
 Example file for `com.slewie.recommender.service.CsvMapDataFetcher`:
 ```csv
 108, 5, bar, american, italian
