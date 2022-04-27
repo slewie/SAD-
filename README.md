@@ -29,8 +29,9 @@ In our code, Chain of Responsibility pattern takes place right in Main method. M
 
 Chain of Responsibility pattern controls sequential executing of programm classes designed for different needs in the following order: dataHandler -> data Fetcher -> dataFiltrer -> DisplayService.
 
-## Running:
+## Steps to execute our program:
 
+1)  Create text file with data written as in the example below:
 Example file for `com.slewie.recommender.service.CsvMapDataFetcher`:
 ```csv
 108, 5, bar, american, italian
@@ -39,3 +40,4 @@ innomax, 4, cafe, italian, japanese, russian
 Art Space, 4, cinema
 Cava, 2, cafe, russian, italian
 ```
+2) Run the Main method with the name of the input file as the first argument.
