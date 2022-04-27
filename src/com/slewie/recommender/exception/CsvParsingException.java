@@ -2,7 +2,7 @@ package com.slewie.recommender.exception;
 
 import static java.lang.String.format;
 
-public class CsvParsingException extends RuntimeException {
+public class CsvParsingException extends MapDataFetchingException {
 
     private final String message;
 

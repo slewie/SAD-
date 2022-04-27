@@ -14,6 +14,11 @@ public class SimpleMapDataFilterer extends MapDataHandler implements MapDataFilt
         this.preference = preference;
     }
 
+    /**
+     * Filters given places by given {@link UserPreference}.
+     * @param places - Places to be filtered
+     * @return Places that satisfy {@link UserPreference}.
+     */
     @Override
     public Set<PlaceInfo> filter(
             Set<PlaceInfo> places
