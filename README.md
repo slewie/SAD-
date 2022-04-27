@@ -13,19 +13,19 @@ The Plan considered your total number of hours added, so that it can calculate y
 The final places can be manually sorted by the user or can use auto sort to get the proper route. The system will give 
 suggestions of places where and when required based on other users plans.
 
-## Rationale for choosing the Facade design pattern
+## Rationale for choosing the Chain of Responsibility design pattern
 
-We have chosen Facade design pattern to isolate main code from complexity of subclasses and their relationships.
+We have chosen Chain of Responsibility design pattern because we have many handlers, and it is the best pattern to pass requests within hierarchy of classes.
 
 ## Job we have done:
 
-To be written...
+Firstly, we constructed a UML diagram containing interfaces, enumerators, and classes. In these objects, we have implemented all need things to manipulate with map and users. Secondly, we wrote code that realizes all objects from UML and creates a CLI application.
 
-## The place of the Facade pattern in our code
+## The place of the Chain of Responsibility pattern in our code
 
-In our code, Facade pattern takes place right after Main method. Main method gets arguments from input, and then, if input is in correct format, creates instance of Facade application and runs it.
+In our code, Chain of Responsibility pattern takes place right in Main method. Main method gets arguments from input, and then, if input is in correct format, creates instances of consecutive classes(dataHandler, dataFetcher, dataFiltrer and DisplayService), sets the order of running of this classes, passes arguments to them and catches Ecxeptions during runtime. This orderly executing of program componets is realization of Chain of Responsibility.
 
-## The application of a Facade pattern
+## The application of a Chain of Responsibility pattern
 
 To be written...
 
