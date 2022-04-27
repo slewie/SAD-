@@ -23,7 +23,7 @@ Firstly, we constructed a UML diagram containing interfaces, enumerators, and cl
 
 ## The place of the Chain of Responsibility pattern in our code
 
-In our code, Facade pattern takes place right after Main method. Main method gets arguments from input, and then, if input is in correct format, creates instance of Facade application and runs it.
+In our code, Chain of Responsibility pattern takes place right in Main method. Main method gets arguments from input, and then, if input is in correct format, creates instances of consecutive classes(dataHandler, dataFetcher, dataFiltrer and DisplayService), sets the order of running of this classes, passes arguments to them and catches Ecxeptions during runtime. This orderly executing of program componets is realization of Chain of Responsibility.
 
 ## The application of a Chain of Responsibility pattern
 
