@@ -6,16 +6,27 @@ import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class SimpleMapDataFilterer implements MapDataFilterer {
+public class SimpleMapDataFilterer extends MapDataHandler implements MapDataFilterer {
+
+    private final UserPreference preference;
+
+    public SimpleMapDataFilterer(UserPreference preference) {
+        this.preference = preference;
+    }
 
     @Override
-    public Set<PlaceInfo> filterBy(
-            Set<PlaceInfo> places, UserPreference preference
+    public Set<PlaceInfo> filter(
+            Set<PlaceInfo> places
     ) {
         var placeSatisfiesPredicate = getPlaceSatisfiesPredicate(preference);
         return places.stream()
                      .filter(placeSatisfiesPredicate)
                      .collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<PlaceInfo> handle(Set<PlaceInfo> places) {
+        return callNext(filter(places));
     }
 
     private Predicate<PlaceInfo> getPlaceSatisfiesPredicate(UserPreference preference) {

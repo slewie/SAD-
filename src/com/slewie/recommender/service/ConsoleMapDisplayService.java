@@ -4,7 +4,13 @@ import com.slewie.recommender.map.PlaceInfo;
 import java.util.Set;
 import static java.util.stream.Collectors.joining;
 
-public class ConsoleMapDisplayService implements MapDisplayService {
+public class ConsoleMapDisplayService extends MapDataHandler implements MapDisplayService {
+
+    @Override
+    public Set<PlaceInfo> handle(Set<PlaceInfo> places) {
+        displayData(places);
+        return callNext(places);
+    }
 
     @Override
     public void displayData(Set<PlaceInfo> map) {
@@ -16,7 +22,7 @@ public class ConsoleMapDisplayService implements MapDisplayService {
                 el.foodTypes().isEmpty()
                 ? ""
                 : "serving " + el.foodTypes().stream()
-                                 .map(Enum::toString).collect(joining(","))
+                                 .map(Enum::toString).collect(joining(", "))
         ));
     }
 

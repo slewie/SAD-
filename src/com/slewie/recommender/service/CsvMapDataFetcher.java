@@ -14,7 +14,7 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
 
-public class CsvMapDataFetcher implements MapDataFetcher {
+public class CsvMapDataFetcher extends MapDataHandler implements MapDataFetcher {
 
     private final String filename;
     private final Scanner scanner;
@@ -29,6 +29,11 @@ public class CsvMapDataFetcher implements MapDataFetcher {
                     format("File %s not found.", filename)
             );
         }
+    }
+
+    @Override
+    public Set<PlaceInfo> handle(Set<PlaceInfo> places) {
+        return callNext(fetchPlaces());
     }
 
     @Override
@@ -47,7 +52,7 @@ public class CsvMapDataFetcher implements MapDataFetcher {
         return result;
     }
 
-    public Optional<PlaceInfo> fetchRow() {
+    private Optional<PlaceInfo> fetchRow() {
         if (!scanner.hasNextLine()) {
             return Optional.empty();
         }
@@ -98,5 +103,4 @@ public class CsvMapDataFetcher implements MapDataFetcher {
         }
 
     }
-
 }
